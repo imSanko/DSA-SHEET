@@ -34,6 +34,10 @@ int main()
     {
         printf("Grade D");
     }
+     else if (average >= 50)
+    {
+        printf("Grade E");
+    }
 
     return 0;
 }
