@@ -1,15 +1,12 @@
-// Print numbers from 1 to 5
-
 #include <stdio.h>
 int main()
 {
-    int i = 1;
-    
-    while (i <= 5)
-    {
-        printf("%d\n", i);
-        ++i;
-    }
-
-    return 0;
+    int i,n;
+            printf("Enter the nth term");
+             scanf("%d",&n);
+             for(i=1;i<=n;i++);
+{ 
+             printf("%d",2*i-1);
+}
+             return 0;
 }
