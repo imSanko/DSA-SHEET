@@ -1,18 +1,32 @@
 #include <stdio.h>
 int main()
  {
-    double n1, n2, n3;
-    printf("Enter three different numbers: ");
-    scanf("%lf %lf %lf", &n1, &n2, &n3);
+    char operator;
+    double first, second;
+    printf("Enter an operator (+, -, *,): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &first, &second);
 
-    if (n1 >= n2 && n1 >= n3)
-        printf("%.2f is the largest number.", n1);
+    switch (operator)
+     {
+         case '+':
+        printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+        break;
+            case '-':
+        printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+        break;
+            case '*':
+        printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+        break;
+            case '/':
+        printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+        break;
+       
+    default:
 
-    if (n2 >= n1 && n2 >= n3)
-        printf("%.2f is the largest number.", n2);
-
-    if (n3 >= n1 && n3 >= n2)
-        printf("%.2f is the largest number.", n3);
+        printf("Error! operator is not correct");
+    }
 
     return 0;
 }
