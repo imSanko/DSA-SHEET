@@ -5,7 +5,7 @@ int main()
     double first, second;
     printf("Enter an operator (+, -, *,): ");
     scanf("%c", &operator);
-    printf("Enter two operands: ");
+    printf("Enter two type of operands: ");
     scanf("%lf %lf", &first, &second);
 
     switch (operator)
@@ -25,7 +25,7 @@ int main()
        
     default:
 
-        printf("Error! operator is not correct");
+        printf("Error! Operator is not correct");
     }
 
     return 0;
