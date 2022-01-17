@@ -8,7 +8,6 @@ int main() {
     printf("%lld in binary = %d in decimal", n, convert(n));
     return 0;
 }
-
 int convert(long long n) {
     int dec = 0, i = 0, rem;
     while (n != 0) {
