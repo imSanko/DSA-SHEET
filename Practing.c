@@ -1,12 +1,21 @@
 #include <stdio.h>
-int main()
+#include <stdlib.h> 
+int main() 
 {
-    int i,n;
-            printf("Enter the nth term");
-             scanf("%d",&n);
-             for(i=1;i<=n;i++);
-{ 
-             printf("%d",2*i-1);
+   int row = 2, col = 3;
+   int *arr = (int *)malloc(row * col * sizeof(int)); 
+   int i, j;
+    for (i = 0; i < row; i++)
+      for (j = 0; j < col; j++)
+         *(arr + i*col + j) = i + j;    
+            printf("The matrix elements are:\n");
+   for (i = 0; i < row; i++) 
+{
+      for (j = 0; j < col; j++) {
+            printf("%d ", *(arr + i*col + j)); 
 }
-             return 0;
+      printf("\n");
+}
+   free(arr); 
+   return 0;
 }
